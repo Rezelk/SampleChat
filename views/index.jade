@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h2(class='title') CHAT
+	p Online: 
+		span#memberCount
+	
+	article(class='timeline')
+		section(id='chatLog')
+	
+	div(class='chat-control')
+		input(type='text', value='', placeholder='input your name', class='chat-input-name', id='chatName')
+		input(type='text', value='', placeholder='input message', class='chat-input-text', id='chatText')
+		input(type='button', value='send', class='btn btn-info', id='chatSendBtn')
